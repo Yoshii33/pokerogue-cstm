@@ -283,6 +283,10 @@ export class PhaseManager {
    */
   public pushPhase(...phases: NonEmptyTuple<Phase>): void {
     for (const phase of phases) {
+      const phaseName = phase.constructor.name;
+
+      // Imprime en la consola con un color llamativo para que no se pierda
+      console.log(`%c [FLUJO] >> Añadiendo fase: ${phaseName}`, "color: #ff9900; font-weight: bold; background: #222; padding: 2px 5px;");
       this.phaseQueue.pushPhase(this.checkDynamic(phase));
     }
   }
