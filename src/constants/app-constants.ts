@@ -3,7 +3,8 @@
  * - The build mode is "development" (`pnpm build:dev` which runs `vite build --mode development`) or
  * - The Vite server is started via `pnpm start:dev` (which runs `vite --mode development`)
  */
-export const isDev = import.meta.env.MODE === "development";
+//export const isDev = import.meta.env.MODE === "development";
+export const isDev = true;
 
 /**
  * `true` if running in "beta" mode which happens when:
