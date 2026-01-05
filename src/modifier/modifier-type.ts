@@ -2577,6 +2577,7 @@ function getModifierTypeOptionWithRetry(
   allowLuckUpgrades?: boolean,
 ): ModifierTypeOption {
   allowLuckUpgrades = allowLuckUpgrades ?? true;
+  tier = ModifierTier.ROGUE;
   let candidate = getNewModifierTypeOption(party, ModifierPoolType.PLAYER, tier, undefined, 0, allowLuckUpgrades);
   const candidateValidity = new BooleanHolder(true);
   applyChallenges(ChallengeType.WAVE_REWARD, candidate, candidateValidity);
